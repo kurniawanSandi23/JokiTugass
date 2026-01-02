@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasa Joki Tugas Profesional</title>
+
+  <!-- Font modern -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SVG ICONS (hidden sprite) -->
+  <svg aria-hidden="true" style="display:none;">
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M11.47 2.6a1 1 0 0 1 1.06 0l5 3a1 1 0 0 1 .57.9v4.14c0 4.1-2.6 7.79-6.4 9.05a1 1 0 0 1-.74 0C8.6 18.43 6 14.74 6 10.64V6.5a1 1 0 0 1 .57-.9l4.9-3z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21zm1 11.25h4.5v1.5H12V6.75h1.5v5.999z"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M9.5 16.5L5 12l1.4-1.4 3.1 3.1 7.5-7.5L18 8.9z"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.94 11.94 0 1 0 21 12a11.9 11.9 0 0 0-7.52-10.74L12 3.6a9.6 9.6 0 1 1 6.9 8.9l1.62 1.62A12 12 0 0 0 20.52 3.48z"/>
+    </symbol>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container nav">
+      <div class="logo">Joki<span>Tugas</span></div>
+
+      <nav class="nav-items" role="navigation" aria-label="Main navigation">
+        <a href="#layanan">Layanan</a>
+        <a href="#features">Kenapa</a>
+        <a href="#harga">Harga</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/6289518573420" class="btn-primary">WhatsApp</a>
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#layanan">Layanan</a>
+      <a href="#features">Kenapa</a>
+      <a href="#harga">Harga</a>
+      <a href="#kontak">Kontak</a>
+      <a href="https://wa.me/6281234567890" class="btn-primary">WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid reveal">
+      <div class="hero-text">
+        <p class="eyebrow">Solusi cepat & terpercaya</p>
+        <h1>Jasa Joki Tugas <span>Profesional</span></h1>
+        <p class="lead">
+          Solusi tugas kuliah, skripsi, dan coding aman, rapi, tepat waktu, dan terpercaya.
+        </p>
+        <div class="hero-action">
+          <a href="https://wa.me/6289518573420" class="btn-primary">Pesan Sekarang</a>
+          <a href="#layanan" class="btn-outline">Lihat Layanan</a>
+        </div>
+        <p class="small-note">1 revisi gratis. selebihnya dikenakan biaya tambahan sesuai kompleksitas.</p>
+        <div class="trust">
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg> Garansi Privasi</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> Respon 24 jam</span>
+        </div>
+
+        <p class="universal-note">Kami menyelesaikan tugas apa pun - konsultasi detail tugas supaya penawaran akurat.</p>
+      </div>
+
+      <div class="hero-form">
+        <div class="hero-card form-card">
+          <h3 class="form-title">Kirim Detail Tugas Anda</h3>
+          <form id="lead-form" class="lead-form" aria-label="Form konsultasi cepat">
+            <div class="form-row">
+              <input name="name" id="name" type="text" placeholder="Nama Anda *" required />
+              <input name="phone" id="phone" type="tel" placeholder="Nomor WhatsApp (contoh: 0812...) *" required />
+            </div>
+
+            <div class="form-row">
+              <select name="type" id="type" required>
+                <option value="">Jenis tugas</option>
+                <option value="Makalah/Essay">Makalah / Essay</option>
+                <option value="Skripsi/Proposal">Skripsi / Proposal</option>
+                <option value="Coding/Data">Coding / Data</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <textarea name="details" id="details" rows="4" placeholder="Deskripsikan tugas singkat (deadline, format, dsb.) *" required></textarea>
+            </div>
+
+            <div class="form-row form-actions">
+              <button type="submit" class="btn-primary">Kirim via WhatsApp</button>
+              <button type="button" id="btn-reset" class="btn-outline">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+<section class="social-proof reveal">
+  <div class="container social-grid">
+    <div class="proof-card">
+      <strong>500+</strong>
+      <span>Tugas Selesai</span>
+    </div>
+    <div class="proof-card">
+      <strong>100+</strong>
+      <span>Mahasiswa Aktif</span>
+    </div>
+    <div class="proof-card ig">
+      <strong>@jokilekku</strong>
+      <span>Instagram Resmi</span>
+    </div>
+  </div>
+</section>
+
+  <!-- SERVICES -->
+  <section id="layanan" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Layanan Kami</h2>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>Makalah & Essay</h3>
+          <p>Penulisan rapi, sesuai format, dan bebas plagiarisme.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Skripsi & Proposal</h3>
+          <p>Pendampingan dari awal hingga ACC revisi.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Coding & Data</h3>
+          <p>Website, Python, SPSS, Excel, dan analisis data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="harga" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Paket & Harga</h2>
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>Paket Basic</h3>
+          <p>Cocok untuk tugas singkat <strong>Harga menyesuaikan dengan detail tugas</strong>. <em>Termasuk 1 kali revisi gratis</em>. Hubungi kami untuk konsultasi dan penawaran.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Paket Pro</h3>
+          <p>Pendampingan lengkap untuk proyek menengah <strong>Harga menyesuaikan dengan detail tugas</strong>. <em>Termasuk 1 kali revisi gratis</em>. Konsultasi gratis.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Paket Premium</h3>
+          <p>Untuk skripsi, proyek besar, dan prioritas <strong>Harga menyesuaikan dengan detail tugas</strong>. <em>Termasuk 1 kali revisi gratis</em>. Diskusi via WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section light">
+    <div class="container">
+      <h2 class="section-title reveal">Kenapa Memilih Kami?</h2>
+
+      <div class="feature-grid">
+        <div class="feature reveal"><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg> Aman & Rahasia</div>
+        <div class="feature reveal"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> Tepat Waktu</div>
+        <div class="feature reveal"><svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg> Kualitas Premium</div>
+        <div class="feature reveal"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Revisi Sampai ACC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="kontak" class="cta">
+    <div class="container reveal">
+      <h2>Siap Menyelesaikan Tugas Anda?</h2>
+      <p>Konsultasi gratis via WhatsApp sekarang</p>
+      <a href="https://wa.me/6289518573420" class="btn-primary big">Hubungi WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 jokilekku. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- FLOATING SOCIAL -->
+<div class="floating-social">
+  <a href="https://wa.me/6289518573420" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="float-btn wa">
+    💬
+  </a>
+  <a href="https://instagram.com/jokilekku" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="float-btn ig">
+    📸
+  </a>
+</div>
+
+<!-- Toast notifications -->
+<div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+</html>
